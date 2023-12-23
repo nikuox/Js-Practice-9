@@ -25,6 +25,13 @@
           this.userId = id;
           this.elementId = elId;
         }
+        get price() {
+          return this._price + "toman";
+        }
+        set price(p) {
+          if (p > 0) this._price = p;
+          else this._price = 0;
+        }
         info() {
           console.log("your wallet id=${this.userId} and price=${this.price}");
         }
