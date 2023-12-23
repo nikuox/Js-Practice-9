@@ -6,32 +6,38 @@
     <title>Document</title>
   </head>
   <body>
-    <script>
-      class Car {
-        speed = 80;
-        color = "blue";
-      }
-      let myCar = new Car();
+    <div id="user2"></div>
 
-      let yourCar = new Car();
-      yourCar.color = "green";
-      console.log(yourCar.color);
+    <script>
+      //   class Car {
+      //     speed = 80;
+      //     color = "blue";
+      //   }
+      //   let myCar = new Car();
+
+      //   let yourCar = new Car();
+      //   yourCar.color = "green";
+      //   console.log(yourCar.color);
 
       class Wallet {
-        constructor(id, p) {
+        constructor(id, p, elId) {
           this.price = p;
           this.userId = id;
+          this.elementId = elId;
         }
         info() {
-          console.log('your wallet id=${this.userId} and price=${this.price}');
+          console.log("your wallet id=${this.userId} and price=${this.price}");
         }
-        charge(p){
-            this.price=this.price+p;
+        charge(p) {
+          this.price = this.price + p;
         }
-        let v1= new Wallet(10,5000);
-        v1.charge(2000);
-        v1.info();
+        updateView() {
+          document.getElementById(this.elementId).innertext = "price";
+        }
       }
+      let v1 = new Wallet(10, 5000, "user2");
+      v1.charge(2000);
+      v1.info();
     </script>
   </body>
 </html>
