@@ -16,6 +16,16 @@
       let yourCar = new Car();
       yourCar.color = "green";
       console.log(yourCar.color);
+
+      class Wallet {
+        constructor(id, p) {
+          this.price = p;
+          this.userId = id;
+        }
+        info() {
+          console.log("your wallet id=${this.userId} and price=${this.price}");
+        }
+      }
     </script>
   </body>
 </html>
