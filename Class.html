@@ -23,8 +23,14 @@
           this.userId = id;
         }
         info() {
-          console.log("your wallet id=${this.userId} and price=${this.price}");
+          console.log('your wallet id=${this.userId} and price=${this.price}');
         }
+        charge(p){
+            this.price=this.price+p;
+        }
+        let v1= new Wallet(10,5000);
+        v1.charge(2000);
+        v1.info();
       }
     </script>
   </body>
