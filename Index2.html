@@ -6,14 +6,28 @@
     <title>Document</title>
   </head>
   <body>
+    <p id="text" data-display="hi">hello</p>
     <script>
+      document.getElementById("text").title = "hello";
+      // class myMath {
+      //   static abs(p) {
+      //     if (p < 0) return p * -1;
+      //     else return p;
+      //   }
+      // }
+      // console.log(myMath.abs(-5));
+
       class myMath {
         static abs(p) {
           if (p < 0) return p * -1;
           else return p;
         }
+        static test() {
+          console.log("t");
+        }
       }
       console.log(myMath.abs(-5));
+      myMath.test();
     </script>
   </body>
 </html>
