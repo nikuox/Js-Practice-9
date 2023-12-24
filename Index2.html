@@ -19,6 +19,13 @@
       function showNumber() {
         console.log(5);
       }
+
+      document.getElementById("text").addEventListener("click", showNumber(15));
+
+      function showNumber(id) {
+        //to show 15 right away without clicking
+        console.log(id);
+      }
       // class myMath {
       //   static abs(p) {
       //     if (p < 0) return p * -1;
