@@ -13,6 +13,12 @@
       document.getElementById("text").onclick = function () {
         alert("hellooo");
       };
+
+      document.getElementById("text").addEventListener("click", showNumber);
+
+      function showNumber() {
+        console.log(5);
+      }
       // class myMath {
       //   static abs(p) {
       //     if (p < 0) return p * -1;
